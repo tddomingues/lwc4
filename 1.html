@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Formulário">
+		<div class="slds-m-around_medium">
+			<lightning-input label="Número 1" type="text" name="numb1" class="formInput" onchange={handleChange}> </lightning-input>
+            <lightning-input label="Número 2" type="text" name="numb2" class="formInput" onchange={handleChange}> </lightning-input>
+		</div>
+        <lightning-button label="Somar" onclick={handleChangeClickSom}></lightning-button>
+        <lightning-button label="Subtrair" onclick={handleChangeClickSubt}></lightning-button>
+        <lightning-button label="Dividir" onclick={handleChangeClickDiv}></lightning-button>
+        <lightning-button label="Multiplicar" onclick={handleChangeClickMult}></lightning-button>
+        <p>Resultado = {resultado}</p>
+    </lightning-card>
+</template>
