@@ -1,0 +1,24 @@
+<template>
+  <lightning-card title="Nova Oportunidade" icon-name="standard:opportunity">
+    <div class="slds-m-around_medium">
+      <lightning-record-edit-form object-api-name={opportunityObject} onsuccess={handleOpportunityCreated}
+        onerror={handleError}>
+        <lightning-messages></lightning-messages>
+        <div class="slds-grid slds-wrap">
+          <div class="slds-col slds-size_1-of-1">
+            <lightning-input-field field-name={nameField}></lightning-input-field>
+
+            <lightning-input-field field-name={StageNameField}></lightning-input-field>
+
+            <lightning-input-field field-name={CloseDateField}></lightning-input-field>
+          </div>
+        </div>
+
+        <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-end">
+          <lightning-button label="Limpar" onclick={handleReset} class="slds-m-right_xx-small"></lightning-button>
+        <lightning-button label="Criar Oportunidade" type="submit" variant="brand" class="slds-m-right_xx-small"></lightning-button>
+      </div>
+      </lightning-record-edit-form>
+    </div>
+  </lightning-card>
+</template>
